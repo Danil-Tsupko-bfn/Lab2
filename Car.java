@@ -1,5 +1,6 @@
-import java.io.Serializable;
+package org.example;
 
+import java.io.Serializable;
 public class Car implements Serializable {
     private static final long serialVersionUID = 1L;
 

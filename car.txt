@@ -1,0 +1,2 @@
+Street Car: Brand - Toyota, Year - 2022, Horsepower - 200.0
+F1 - Mercedes,  Year - 2022, Horsepower - 1000.0 , Downforce -500.0

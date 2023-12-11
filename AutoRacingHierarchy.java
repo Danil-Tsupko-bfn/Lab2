@@ -1,6 +1,7 @@
-import org.example.JsonEntitySerialization;
-import org.example.XmlEntitySerialization;
+package org.example;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class AutoRacingHierarchy {
@@ -25,5 +26,17 @@ public class AutoRacingHierarchy {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        String streetCarData = "Street Car: Brand - " + streetCar.getBrand() + ", Year - " + streetCar.getYear() +
+                ", Horsepower - " + streetCar.getHorsepower();
+        String formula1CarData = "F1 - " + formula1Car.getBrand() + ",  Year - " + formula1Car.getYear() +
+                ", Horsepower - " +  formula1Car.getHorsepower() + " , Downforce -" + formula1Car.getDownforce();
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("car.txt"))) {
+            writer.write(streetCarData + "\n");
+            writer.write(formula1CarData);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-}
+    }
